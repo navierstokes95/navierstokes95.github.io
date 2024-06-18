@@ -59,7 +59,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Jigar Sable";
+            document.title = "Portfolio | Arif Ahmed";
             $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
@@ -71,7 +71,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["Mechanical Engineering", "Industrial Design", "Internet of Things", "Industrial Automation", "TVET Training", "Project Planning"],
+    strings: ["Industrial Design", "Industrial Automation", "Internet of Things", "TVET Training", "Project Planning"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
