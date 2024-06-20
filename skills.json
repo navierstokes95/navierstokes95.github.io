@@ -1,19 +1,23 @@
 [
     {
         "name": "SolidWorks",
-        "icon": "https://img.icons8.com/?size=100&id=62397&format=png&color=000000"
+        "icon": "https://img.icons8.com/?size=100&id=62397&format=png&color=000000",
+        "category": "CAD Software"
     },
     {
         "name": "Onshape",
-        "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
+        "icon": "https://img.icons8.com/fluency/48/000000/node-js.png",
+        "category": "CAD Software"
     },
     {
         "name": "NodeJS",
-        "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
+        "icon": "https://img.icons8.com/color/48/000000/nodejs.png",
+        "category": "Programming Language"
     },
     {
         "name": "Redux",
-        "icon": "https://img.icons8.com/color/48/000000/redux.png"
+        "icon": "https://img.icons8.com/color/48/000000/redux.png",
+        "category": "Programming Language"
     },
     {
         "name": "Firebase",

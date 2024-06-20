@@ -530,6 +530,35 @@ header .navbar ul li a:hover {
   }
 }
 /* skills media queries ends*/
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #ccc;
+}
+
+.skills .bar .info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills .bar .info img {
+  width: 48px;
+  height: 48px;
+}
+
 /* skills section ends */
 
 /* education section starts */

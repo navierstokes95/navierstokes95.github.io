@@ -68,7 +68,7 @@ document.addEventListener('visibilitychange',
         }
     });
 
-
+8
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
     strings: ["Industrial Design", "Industrial Automation", "Internet of Things", "TVET Training", "Project Planning"],
@@ -103,6 +103,18 @@ function showSkills(skills) {
     });
     skillsContainer.innerHTML = skillHTML;
 }
+function filterSkills(category) {
+    let filteredSkills = skills;
+    if (category !== 'all') {
+        filteredSkills = skills.filter(skill => skill.category === category);
+    }
+    showSkills(filteredSkills);
+}
+
+// Show all skills on page load
+document.addEventListener("DOMContentLoaded", function() {
+    showSkills(skills);
+});
 
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
