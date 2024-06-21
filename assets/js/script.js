@@ -182,26 +182,6 @@ const skillsData = [
       category: "Programming Language"
     },
     {
-      name: "Arduino",
-      icon: "https://icon-icons.com/icons2/159/PNG/256/arduino_22429.png",
-      category: "Automation and IoT "
-    },
-    {
-      name: "Node-Red",
-      icon: "https://logowik.com/content/uploads/images/node-red4832.logowik.com.webp",
-      category: "Automation and IoT "
-    },
-    {
-      name: "ThingsBoard",
-      icon: "https://asset.brandfetch.io/id8ftKrGt3/idc1SXKXki.jpeg",
-      category: "Automation and IoT "
-    },
-    {
-      name: "MQTT",
-      icon: "https://mqtt.org/assets/downloads/mqtt-ver.png",
-      category: "Automation and IoT "
-    },
-    {
       name: "Raspberry Pi",
       icon: "https://miro.medium.com/v2/resize:fit:1200/0*EonQaU90v2fwXO3c.png",
       category: "Automation and IoT"
@@ -225,6 +205,26 @@ const skillsData = [
       name: "Siemens PLC",
       icon: "https://ngocautomation.com/wp-content/uploads/2020/08/TIA-V16-1.png",
       category: "Automation and IoT"
+    },
+    {
+      name: "Arduino",
+      icon: "https://icon-icons.com/icons2/159/PNG/256/arduino_22429.png",
+      category: "Automation and IoT "
+    },
+    {
+      name: "Node-Red",
+      icon: "https://logowik.com/content/uploads/images/node-red4832.logowik.com.webp",
+      category: "Automation and IoT "
+    },
+    {
+      name: "ThingsBoard",
+      icon: "https://asset.brandfetch.io/id8ftKrGt3/idc1SXKXki.jpeg",
+      category: "Automation and IoT "
+    },
+    {
+      name: "MQTT",
+      icon: "https://mqtt.org/assets/downloads/mqtt-ver.png",
+      category: "Automation and IoT "
     },
     {
       name: "Ansys",
