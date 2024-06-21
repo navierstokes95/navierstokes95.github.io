@@ -122,11 +122,12 @@ const skillsData = [
     let skillHTML = "";
     skills.forEach(skill => {
       skillHTML += `
-        <div class="skill-card">
-          <img src="${skill.icon}" alt="${skill.name}" />
-          <h3>${skill.name}</h3>
-        </div>
-      `;
+        <div class="bar">
+              <div class="info">
+                <img src=${skill.icon} alt="skill" />
+                <span>${skill.name}</span>
+              </div>
+            </div>`
     });
     skillsContainer.innerHTML = skillHTML;
   }
@@ -143,7 +144,7 @@ const skillsData = [
   document.addEventListener("DOMContentLoaded", function() {
     showSkills(skillsData);
   });
-  
+
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
