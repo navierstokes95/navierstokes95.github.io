@@ -477,6 +477,8 @@ header .navbar ul li a:hover {
   width: 90%;
   margin: auto;
   margin-top: 2rem;
+  max-height: 60vh; /* Adjust the height as needed */
+  overflow-y: auto; /* Add vertical scroll bar */
 }
 .buttons {
   display: flex;

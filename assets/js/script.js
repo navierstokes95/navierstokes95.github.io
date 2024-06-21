@@ -202,11 +202,6 @@ const skillsData = [
       category: "Automation and IoT"
     },
     {
-      name: "Siemens PLC",
-      icon: "https://ngocautomation.com/wp-content/uploads/2020/08/TIA-V16-1.png",
-      category: "Automation and IoT"
-    },
-    {
       name: "Arduino",
       icon: "https://icon-icons.com/icons2/159/PNG/256/arduino_22429.png",
       category: "Automation and IoT "
