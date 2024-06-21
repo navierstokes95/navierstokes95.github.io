@@ -178,12 +178,12 @@ const skillsData = [
     ,
     {
       name: "Linux",
-      icon: "https://image.similarpng.com/very-thumbnail/2021/09/Linux-icon-design-on-transparent-background-PNG.pngs",
+      icon: "https://cdn-icons-png.flaticon.com/512/518/518713.png",
       category: "Programming Language"
     },
     {
       name: "Arduino",
-      icon: "https://w7.pngwing.com/pngs/174/620/png-transparent-arduino-hd-logo.png",
+      icon: "https://icon-icons.com/icons2/159/PNG/256/arduino_22429.png",
       category: "Automation and IoT "
     },
     {
@@ -238,7 +238,7 @@ const skillsData = [
     },
     {
       name: "CFTurbo",
-      icon: "https://e7.pngegg.com/pngimages/51/79/png-clipart-ansys-logo-nasdaq-anss-engineering-geometry-background-company-text.png",
+      icon: "https://image.pitchbook.com/YQLCAPVm9g8Vi7fScFYsr0oqxCp1498833861029_200x200",
       category: "Research and Simulation"
     },
     {
