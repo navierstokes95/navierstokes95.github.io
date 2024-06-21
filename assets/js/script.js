@@ -79,43 +79,71 @@ var typed = new Typed(".typing-text", {
 });
 // <!-- typed js effect ends -->
 
-async function fetchData(type = "skills") {
-    let response
-    type === "skills" ?
-        response = await fetch("skills.json")
-        :
-        response = await fetch("./projects/projects.json")
-    const data = await response.json();
-    return data;
-}
-
-function showSkills(skills) {
+const skillsData = [
+    {
+      name: "SolidWorks",
+      icon: "https://img.icons8.com/?size=100&id=62397&format=png&color=000000",
+      category: "CAD Software"
+    },
+    {
+      name: "Onshape",
+      icon: "https://img.icons8.com/fluency/48/000000/onshape.png",
+      category: "CAD Software"
+    },
+    {
+      name: "NodeJS",
+      icon: "https://img.icons8.com/color/48/000000/nodejs.png",
+      category: "Programming Language"
+    },
+    {
+      name: "Redux",
+      icon: "https://img.icons8.com/color/48/000000/redux.png",
+      category: "Programming Language"
+    },
+    {
+      name: "Firebase",
+      icon: "https://img.icons8.com/color/48/000000/firebase.png",
+      category: "Programming Language"
+    },
+    {
+      name: "Android",
+      icon: "https://img.icons8.com/fluency/48/000000/android-os.png",
+      category: "Programming Language"
+    },
+    {
+      name: "MaterialUI",
+      icon: "https://img.icons8.com/color/48/000000/material-ui.png",
+      category: "Programming Language"
+    }
+  ];
+  
+  function showSkills(skills) {
     let skillsContainer = document.getElementById("skillsContainer");
     let skillHTML = "";
     skills.forEach(skill => {
-        skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
-              </div>
-            </div>`
+      skillHTML += `
+        <div class="skill-card">
+          <img src="${skill.icon}" alt="${skill.name}" />
+          <h3>${skill.name}</h3>
+        </div>
+      `;
     });
     skillsContainer.innerHTML = skillHTML;
-}
-function filterSkills(category) {
-    let filteredSkills = skills;
+  }
+  
+  function filterSkills(category) {
+    let filteredSkills = skillsData;
     if (category !== 'all') {
-        filteredSkills = skills.filter(skill => skill.category === category);
+      filteredSkills = skillsData.filter(skill => skill.category === category);
     }
     showSkills(filteredSkills);
-}
-
-// Show all skills on page load
-document.addEventListener("DOMContentLoaded", function() {
-    showSkills(skills);
-});
-
+  }
+  
+  // Show all skills on page load
+  document.addEventListener("DOMContentLoaded", function() {
+    showSkills(skillsData);
+  });
+  
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
