@@ -23,7 +23,7 @@
     "name": "ThingsBoard White Labeling",
     "desc": "White labeling, custom logo, custom widget, text, and UI developed on top of Thingboard CE. Changes are tested in Docker.",
     "image": "newsboxandroid",
-    "category": "automation",
+    "category": "iot-development",
     "links": {
       "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/navierstokes95//newsbox-android"
