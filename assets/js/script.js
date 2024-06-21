@@ -121,20 +121,137 @@ const skillsData = [
       category: "CAD Software"
     },
     {
-      name: "Firebase",
-      icon: "https://img.icons8.com/color/48/000000/firebase.png",
+      name: "ArtCAM",
+      icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToMgjw-7VBgpkxB6xVHUXznrxWymOg2zJChg&s",
+      category: "CAD Software"
+    },
+    {
+      name: "Geomagic Design X",
+      icon: "https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/50803a25-8e13-4f65-8c2e-f81d1296f633.png",
+      category: "CAD Software"
+    },
+    {
+      name: "C/C++",
+      icon: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png",
       category: "Programming Language"
     },
     {
-      name: "Android",
-      icon: "https://img.icons8.com/fluency/48/000000/android-os.png",
+      name: "Python",
+      icon: "https://img.icons8.com/color/48/000000/python--v1.png",
       category: "Programming Language"
     },
     {
-      name: "MaterialUI",
-      icon: "https://img.icons8.com/color/48/000000/material-ui.png",
+      name: "JavaScript",
+      icon: "https://img.icons8.com/color/48/000000/javascript--v1.png",
       category: "Programming Language"
+    },
+    {
+      name: "NodeJS",
+      icon: "https://img.icons8.com/color/48/000000/nodejs.png",
+      category: "Programming Language"
+    },
+    {
+      name: "PostgreSQL",
+      icon: "https://img.icons8.com/color/48/000000/postgreesql.png",
+      category: "Programming Language"
+    },
+    {
+      name: "DigitalOcean",
+      icon: "https://img.icons8.com/ios-filled/48/0080FF/digitalocean.png",
+      category: "Programming Language"
+    },
+    {
+      name: "GitHub",
+      icon: "https://img.icons8.com/glyph-neue/48/ffffff/github.png",
+      category: "Programming Language"
+    },
+    {
+      name: "HTML5",
+      icon: "https://img.icons8.com/color/48/000000/html-5--v1.png",
+      category: "Programming Language"
+    },
+    {
+      name: "CSS3",
+      icon: "https://img.icons8.com/color/48/000000/css3.png",
+      category: "Programming Language"
+    },
+    ,
+    {
+      name: "Linux",
+      icon: "https://image.similarpng.com/very-thumbnail/2021/09/Linux-icon-design-on-transparent-background-PNG.pngs",
+      category: "Programming Language"
+    },
+    {
+      name: "Arduino",
+      icon: "https://w7.pngwing.com/pngs/174/620/png-transparent-arduino-hd-logo.png",
+      category: "Automation and IoT "
+    },
+    {
+      name: "Node-Red",
+      icon: "https://logowik.com/content/uploads/images/node-red4832.logowik.com.webp",
+      category: "Automation and IoT "
+    },
+    {
+      name: "ThingsBoard",
+      icon: "https://asset.brandfetch.io/id8ftKrGt3/idc1SXKXki.jpeg",
+      category: "Automation and IoT "
+    },
+    {
+      name: "MQTT",
+      icon: "https://mqtt.org/assets/downloads/mqtt-ver.png",
+      category: "Automation and IoT "
+    },
+    {
+      name: "Raspberry Pi",
+      icon: "https://miro.medium.com/v2/resize:fit:1200/0*EonQaU90v2fwXO3c.png",
+      category: "Automation and IoT"
+    },
+    {
+      name: "Siemens PLC",
+      icon: "https://ngocautomation.com/wp-content/uploads/2020/08/TIA-V16-1.png",
+      category: "Automation and IoT"
+    },
+    {
+      name: "SCADA",
+      icon: "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_d19102425cd16dd7ea2e286d8f3d694a/simatic-wincc.jpg",
+      category: "Automation and IoT"
+    },
+    {
+      name: "Mitsubishi PLC",
+      icon: "https://vattutudonghoa.com/content/images/thumbs/0017273_software_gx_works_3_ver_1038q.png",
+      category: "Automation and IoT"
+    },
+    {
+      name: "Siemens PLC",
+      icon: "https://ngocautomation.com/wp-content/uploads/2020/08/TIA-V16-1.png",
+      category: "Automation and IoT"
+    },
+    {
+      name: "Ansys",
+      icon: "https://e7.pngegg.com/pngimages/51/79/png-clipart-ansys-logo-nasdaq-anss-engineering-geometry-background-company-text.png",
+      category: "Research and Simulation"
+    },
+    {
+      name: "MATLAB",
+      icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc36bSKd51qFqjmBk_cDA3eNAeYF2Dtc_fWQ&s",
+      category: "Research and Simulation"
+    },
+    {
+      name: "CFTurbo",
+      icon: "https://e7.pngegg.com/pngimages/51/79/png-clipart-ansys-logo-nasdaq-anss-engineering-geometry-background-company-text.png",
+      category: "Research and Simulation"
+    },
+    {
+      name: "ROS2",
+      icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ72zhKupIgXa2wpEOH35TkbgDRkqGfgiCM1Q&s",
+      category: "Research and Simulation"
+    },
+    {
+      name: "Gazebo",
+      icon: "https://gazebosim.org/assets/images/logos/gazebo_vert_pos.svg",
+      category: "Research and Simulation"
     }
+
   ];
   
   function showSkills(skills) {
