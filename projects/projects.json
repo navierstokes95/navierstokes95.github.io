@@ -1,39 +1,39 @@
 [
   {
-    "name": "NotyStack Android",
-    "desc": "Fully fledged android CRUD app based on different design patterns. Built using Java, XML, SQLite, Firebase, RoomDB, MVVM.",
+    "name": "Smart Electrical Energy Monitoring System",
+    "desc": "Energy consumption data is read from multiple smart energy meters usin Siemens s7-1200 PLC via MODBUS RTU. Data is then sent to Thingsboard cloud via Node-Red as MQTT client. Both local and cloud dashboard is designed.",
     "image": "notystackandroid",
-    "category": "android",
+    "category": "Industrial Automation",
     "links": {
       "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/navierstokes95//notystack-android"
     }
   },
   {
-    "name": "SPPU Engg Prep",
-    "desc": "All in one SPPU Engineering resources. Built using Java, XML and Firebase.",
+    "name": "Cloud based OEE Monitoring for CNC Machine",
+    "desc": "HAAS CNC CM-1 Machine parameters are read via MTConnect, Ethernet and HTTP request usinf Node-red as server. The data is then used to calculate OEE parameters. The data is sent to Thingsboard cloud and dashboard is designed.",
     "image": "sppuprepandroid",
-    "category": "android",
+    "category": "Industrial Automation",
     "links": {
       "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/navierstokes95//sppu-prep-android"
     }
   },
   {
-    "name": "NewsBox Android",
-    "desc": "Native android app built using Java, XML. Retrofit & Glide dependencies. Provides different category news.",
+    "name": "ThingsBoard White Labeling",
+    "desc": "White labeling, custom logo, custom widget, text, and UI developed on top of Thingboard CE. Changes are tested in Docker.",
     "image": "newsboxandroid",
-    "category": "android",
+    "category": "Industrial Automation",
     "links": {
       "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/navierstokes95//newsbox-android"
     }
   },
   {
-    "name": "Weatherly Android",
-    "desc": "Native android app built using Java, XML and Volley dependencies. Provides weather forecast.",
+    "name": "Collaboartive Robot Programming",
+    "desc": "Programming of a Neuromeka COBOT for pick and place task",
     "image": "weatherlyandroid",
-    "category": "android",
+    "category": "Industrial Automation",
     "links": {
       "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/navierstokes95//weatherly-android"
