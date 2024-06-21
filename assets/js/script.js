@@ -87,18 +87,38 @@ const skillsData = [
     },
     {
       name: "Onshape",
-      icon: "https://img.icons8.com/fluency/48/000000/onshape.png",
+      icon: "https://play-lh.googleusercontent.com/yAS9WJJnjlCx77RxIvJSssrixhCdUxnBlM3CuPnQpl8QI3Ez19KreBL4xREc1gtmK_Y",
       category: "CAD Software"
     },
     {
-      name: "NodeJS",
-      icon: "https://img.icons8.com/color/48/000000/nodejs.png",
-      category: "Programming Language"
+      name: "Fusion 360",
+      icon: "https://www.softexia.com/wp-content/uploads/2024/04/Autodesk_Fusion_360.webp",
+      category: "CAD Software"
     },
     {
-      name: "Redux",
-      icon: "https://img.icons8.com/color/48/000000/redux.png",
-      category: "Programming Language"
+      name: "AutoCAD",
+      icon: "https://logos-world.net/wp-content/uploads/2020/12/Autocad-Logo.png",
+      category: "CAD Software"
+    },
+    {
+      name: "Autodesk Inventor",
+      icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWa67bjrJIYCX67ffP36BlY09SpFsbsSSmg&s",
+      category: "CAD Software"
+    },
+    {
+      name: "Catia",
+      icon: "https://upload.wikimedia.org/wikipedia/commons/6/60/DS-CATIA-Logo.png",
+      category: "CAD Software"
+    },
+    {
+      name: "FreeCAD",
+      icon: "https://e7.pngegg.com/pngimages/615/745/png-clipart-freecad-computer-aided-design-open-source-software-3d-modeling-software-design-blue-angle.png",
+      category: "CAD Software"
+    },
+    {
+      name: "MasterCAM",
+      icon: "https://allvectorlogo.com/img/2017/07/mastercam-logo.png",
+      category: "CAD Software"
     },
     {
       name: "Firebase",
