@@ -716,18 +716,18 @@ header .navbar ul li a:hover {
 }
 .work .box-container .box .content .tag {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5.5rem !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 4.5rem !important;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem !important;
   background: #ffd900;
-  box-sizing: border-box; /* Includes padding in the element's total width and height */
+  box-sizing: border-box !important; /* Includes padding in the element's total width and height */
 }
 .work .box-container .box .content .tag h3 {
   font-size: 2rem;
-  margin: 10% !important; /* Removes default margin */
-  text-align: center !important; /* Centers the text */
+  margin: 0%; /* Removes default margin */
+  text-align: center; /* Centers the text */
 }
 .work .box-container .box:hover .content {
   top: 0%;  /* full covered */
