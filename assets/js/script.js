@@ -78,7 +78,7 @@ var typed = new Typed(".typing-text", {
 // fetch json 
 async function fetchData(type = "skills") {
   let response;
-  console.log(type);
+  console.log("type: ",type);
   if (type === "skills") {
       response = await fetch("skills.json");
   } else if (type === "projects") {
