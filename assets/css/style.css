@@ -675,22 +675,18 @@ header .navbar ul li a:hover {
 
 /* work section starts */
 .work {
-  /* background: #010124; */
-  background: linear-gradient(to bottom, #000031, #00002c);
+  padding: 2rem;
+  background-color: #f8f8f8;
 }
-.work h2 {
-  color: #fff;
-  padding: 1rem;
-}
-.work .heading span {
-  color: rgb(255, 230, 0);
-}
+
+/* Box container */
 .work .box-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   margin: 2rem;
 }
+
 .work .box-container .box {
   flex: 1 1 30rem;
   border-radius: 0.5rem;
@@ -698,12 +694,15 @@ header .navbar ul li a:hover {
   position: relative;
   overflow: hidden;
   height: 30rem;
+  background: #fff;
 }
+
 .work .box-container .box img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
+
 .work .box-container .box .content {
   height: 100%;
   width: 100%;
@@ -714,29 +713,38 @@ header .navbar ul li a:hover {
   display: flex;
   flex-direction: column;
 }
+
+/* Center the project name (h3) within the yellow section */
 .work .box-container .box .content .tag {
   display: flex;
-  justify-content: center !important;
-  align-items: center !important;
-  height: 4.5rem !important;
+  justify-content: center;
+  align-items: center;
+  height: 4.5rem;
   width: 100%;
-  padding: 1rem !important;
+  padding: 1rem;
   background: #ffd900;
-  box-sizing: border-box !important; /* Includes padding in the element's total width and height */
+  box-sizing: border-box; /* Includes padding in the element's total width and height */
 }
+
 .work .box-container .box .content .tag h3 {
   font-size: 2rem;
-  margin: 0%; /* Removes default margin */
+  margin: 0; /* Removes default margin */
   text-align: center; /* Centers the text */
 }
+
 .work .box-container .box:hover .content {
-  top: 0%;  /* full covered */
+  top: 0%;  /* Full covered */
 }
+
 .work .desc {
   margin: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.work .desc p {
+  font-size: 1.5rem;
 }
 .work .desc p {
   font-size: 1.5rem;
