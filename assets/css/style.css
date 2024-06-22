@@ -718,7 +718,7 @@ header .navbar ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5.5rem;
+  height: 5.5rem !important;
   width: 100%;
   padding: 1rem;
   background: #ffd900;
@@ -726,7 +726,7 @@ header .navbar ul li a:hover {
 }
 .work .box-container .box .content .tag h3 {
   font-size: 2rem;
-  margin: 10%; /* Removes default margin */
+  margin: 10% !important; /* Removes default margin */
   text-align: center !important; /* Centers the text */
 }
 .work .box-container .box:hover .content {
