@@ -124,22 +124,22 @@
         {
         "name": "Arduino",
         "icon": "https://icon-icons.com/icons2/159/PNG/256/arduino_22429.png",
-        "category": "Automation and IoT "
+        "category": "Automation and IoT"
         },
         {
         "name": "Node-Red",
         "icon": "https://logowik.com/content/uploads/images/node-red4832.logowik.com.webp",
-        "category": "Automation and IoT "
+        "category": "Automation and IoT"
         },
         {
         "name": "ThingsBoard",
         "icon": "https://asset.brandfetch.io/id8ftKrGt3/idc1SXKXki.jpeg",
-        "category": "Automation and IoT "
+        "category": "Automation and IoT"
         },
         {
         "name": "MQTT",
         "icon": "https://mqtt.org/assets/downloads/mqtt-ver.png",
-        "category": "Automation and IoT "
+        "category": "Automation and IoT"
         },
         {
         "name": "Ansys",
