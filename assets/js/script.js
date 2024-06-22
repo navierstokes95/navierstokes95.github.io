@@ -118,7 +118,7 @@ function filterSkills(category) {
 }
 
 // Show all skills on page load
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
   fetchData("skills").then(data => {
       showSkills(data);
       console.log("skills fetch data success");
@@ -127,6 +127,13 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchData("projects").then(data => {
       showProjects(data);
   });
+});*/
+fetchData().then(data => {
+  showSkills(data);
+});
+
+fetchData("projects").then(data => {
+  showProjects(data);
 });
 
 function showProjects(projects) {
