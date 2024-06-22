@@ -139,7 +139,7 @@ fetchData("projects").then(data => {
 function showProjects(projects) {
   let projectsContainer = document.querySelector("#work .box-container");
   let projectHTML = "";
-  projects.slice(0, 4).forEach(project => {
+  projects.slice(0, 3).forEach(project => {
       if (project.category !== 'all') {
           projectHTML += `
         <div class="box tilt">
