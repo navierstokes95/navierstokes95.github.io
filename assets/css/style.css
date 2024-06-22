@@ -727,7 +727,7 @@ header .navbar ul li a:hover {
 .work .box-container .box .content .tag h3 {
   font-size: 2rem;
   margin: 0; /* Removes default margin */
-  text-align: center; /* Centers the text */
+  text-align: center !important; /* Centers the text */
 }
 .work .box-container .box:hover .content {
   top: 0%;  /* full covered */
