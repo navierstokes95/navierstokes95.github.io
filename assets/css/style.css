@@ -719,17 +719,18 @@ header .navbar ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 7.5rem;
   width: 100%;
   padding: 1rem;
   background: #ffd900;
   box-sizing: border-box; /* Includes padding in the element's total width and height */
+  word-wrap: break-word; /* Ensures long words break into the next line */
 }
 
 .work .box-container .box .content .tag h3 {
   font-size: 2rem;
-  margin: 10%; /* Removes default margin */
+  margin: 0; /* Removes default margin */
   text-align: center; /* Centers the text */
+  word-wrap: break-word; /* Ensures long words break into the next line */
 }
 
 .work .box-container .box:hover .content {
