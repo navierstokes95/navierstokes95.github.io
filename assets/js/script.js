@@ -91,15 +91,16 @@ async function fetchData(type = "skills") {
 }
 
 function showSkills(skills) {
+  console.log("Skills data:", skills); // Log the skills data to verify it's an array
   let skillsContainer = document.getElementById("skillsContainer");
   let skillHTML = "";
   skills.forEach(skill => {
-    skillHTML += `
+      skillHTML += `
       <div class="bar">
-        <div class="info">
+          <div class="info">
           <img src="${skill.icon}" alt="${skill.name}" />
           <span>${skill.name}</span>
-        </div>
+          </div>
       </div>`;
   });
   skillsContainer.innerHTML = skillHTML;
