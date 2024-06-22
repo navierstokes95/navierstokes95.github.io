@@ -207,7 +207,7 @@ header .navbar ul li a:hover{
   box-shadow: 0 .7rem 1rem rgba(0,0,0,.3);
   position: relative;
   overflow:hidden;
-  height:30rem;
+  height:35rem;
   background: #fff;
   border: none;
 }
@@ -225,21 +225,27 @@ header .navbar ul li a:hover{
   display: flex;
   flex-direction: column;
 }
-.work .box-container .box .content .tag{
+/* Center the project name (h3) within the yellow section */
+.work .box-container .box .content .tag {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 4.5rem;
   width: 100%;
-  padding-left: 1rem;
+  padding: 1rem;
   background: #ffd900;
+  box-sizing: border-box; /* Includes padding in the element's total width and height */
+  word-wrap: break-word; /* Ensures long words break into the next line */
 }
-.work .box-container .box .content .tag h3{
+
+.work .box-container .box .content .tag h3 {
   font-size: 2rem;
+  margin: 0; /* Removes default margin */
+  text-align: center; /* Centers the text */
+  word-wrap: break-word; /* Ensures long words break into the next line */
 }
+
 .work .box-container .box:hover .content{
-  top: 25%;
+  top: 0%;
 }
 .work .desc {
   margin: 2rem;
