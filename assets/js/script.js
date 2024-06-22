@@ -105,6 +105,7 @@ function showSkills(skills) {
 }
 
 
+
 function filterSkills(category) {
   fetchData("skills").then(data => {
       let filteredSkills = data;
