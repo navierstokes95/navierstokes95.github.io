@@ -118,6 +118,7 @@ function filterSkills(category) {
 document.addEventListener("DOMContentLoaded", function () {
   fetchData("skills").then(data => {
       showSkills(data);
+      console.log("skills fetch data success");
   });
 
   fetchData("projects").then(data => {
