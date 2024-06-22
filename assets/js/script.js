@@ -86,6 +86,7 @@ async function fetchData(type = "skills") {
       throw new Error("Invalid type specified for fetchData function.");
   }
   const data = await response.json();
+  console.log("Fetched data:", data); // Log the fetched data for debugging
   return data;
 }
 
