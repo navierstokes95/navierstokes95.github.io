@@ -128,8 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function showProjects(projects) {
   let projectsContainer = document.querySelector("#work .box-container");
   let projectHTML = "";
-  projects.slice(0, 5).forEach(project => {
-      if (project.category !== "automation") {
+  projects.slice(0, 4).forEach(project => {
+      //if (project.category !== "all") 
           projectHTML += `
         <div class="box tilt">
           <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="${project.name}" />
@@ -146,11 +146,11 @@ function showProjects(projects) {
             </div>
           </div>
         </div>`;
-      }
+      
   });
   projectsContainer.innerHTML = projectHTML;
 }
-
+/*
 // disable developer mode
 document.onkeydown = function (e) {
   if (e.keyCode == 123) {
@@ -168,7 +168,7 @@ document.onkeydown = function (e) {
   if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
       return false;
   }
-}
+}*/
 
 // Scroll reveal animation
 const srtop = ScrollReveal({
