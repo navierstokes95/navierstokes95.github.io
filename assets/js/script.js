@@ -93,16 +93,17 @@ function showSkills(skills) {
   let skillsContainer = document.getElementById("skillsContainer");
   let skillHTML = "";
   skills.forEach(skill => {
-      skillHTML += `
-    <div class="bar">
-      <div class="info">
-        <img src="${skill.icon}" alt="${skill.name}" />
-        <span>${skill.name}</span>
-      </div>
-    </div>`;
+    skillHTML += `
+      <div class="bar">
+        <div class="info">
+          <img src="${skill.icon}" alt="${skill.name}" />
+          <span>${skill.name}</span>
+        </div>
+      </div>`;
   });
   skillsContainer.innerHTML = skillHTML;
 }
+
 
 function filterSkills(category) {
   fetchData("skills").then(data => {
