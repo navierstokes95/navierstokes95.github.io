@@ -104,8 +104,6 @@ function showSkills(skills) {
   skillsContainer.innerHTML = skillHTML;
 }
 
-
-
 function filterSkills(category) {
   fetchData("skills").then(data => {
       let filteredSkills = data;
