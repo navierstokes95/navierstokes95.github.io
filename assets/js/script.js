@@ -129,7 +129,7 @@ function showProjects(projects) {
   let projectsContainer = document.querySelector("#work .box-container");
   let projectHTML = "";
   projects.slice(0, 4).forEach(project => {
-      //if (project.category !== 'all') 
+      if (project.category !== 'all') {
           projectHTML += `
         <div class="box tilt">
           <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="${project.name}" />
@@ -146,7 +146,7 @@ function showProjects(projects) {
             </div>
           </div>
         </div>`;
-      
+      }
   });
   projectsContainer.innerHTML = projectHTML;
 }

@@ -118,7 +118,7 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 // End of Tawk.to Live Chat
 */
 // disable developer mode
-document.onkeydown = function (e) {
+/*document.onkeydown = function (e) {
     if (e.keyCode == 123) {
         return false;
     }
@@ -134,4 +134,4 @@ document.onkeydown = function (e) {
     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
         return false;
     }
-}
+}*/
