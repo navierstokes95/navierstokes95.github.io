@@ -38,5 +38,55 @@
       "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/navierstokes95//weatherly-android"
     }
+  },
+  {
+    "name": "SolidWorks Design Portfolio",
+    "desc": "Please click on the link to view some of the designs I made with SolidWorks",
+    "image": "weatherlyandroid",
+    "category": "industrial-design",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//weatherly-android"
+    }
+  },
+  {
+    "name": "Onshape Design Portfolio",
+    "desc": "Please click on the link to view some of the designs I made with Onshape",
+    "image": "weatherlyandroid",
+    "category": "industrial-design",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//weatherly-android"
+    }
+  },
+  {
+    "name": "Fusion 360 Design Portfolio",
+    "desc": "Please click on the link to view some of the designs I made with Fusion 360",
+    "image": "weatherlyandroid",
+    "category": "industrial-design",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//weatherly-android"
+    }
+  },
+  {
+    "name": "Manufacturing of a pesticide spraying drone for agricultural application",
+    "desc": "I have modified the design of F550 hexacopter frame and built control system to carry and spray pesticide",
+    "image": "weatherlyandroid",
+    "category": "rnd",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//weatherly-android"
+    }
+  },
+  {
+    "name": "Improving Efficiency Of Agricultural Irrigation Pumps By Manufacturing Impellers Using 3D Printing Technology",
+    "desc": "I have modified the casting process to manufacture centrifugal pump impellers. I have introduced 3D printing for pattern manufacturing, which resulted in higher efficiency of the pump",
+    "image": "weatherlyandroid",
+    "category": "rnd",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//weatherly-android"
+    }
   }
 ]
