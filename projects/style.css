@@ -232,6 +232,7 @@ header .navbar ul li a:hover{
   align-items: center;
   width: 100%;
   padding: 1rem;
+  padding-bottom: 2rem;
   background: #ffd900;
   box-sizing: border-box; /* Includes padding in the element's total width and height */
   word-wrap: break-word; /* Ensures long words break into the next line */
