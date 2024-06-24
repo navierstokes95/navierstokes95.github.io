@@ -209,7 +209,7 @@ header .navbar ul li a:hover{
   /*padding: 20px;*/
   /*margin: 10px;*/
   border-radius: 10px;
-  width: 400px; /* Match this width with the Isotope columnWidth setting */
+  width: 350px; /* Match this width with the Isotope columnWidth setting */
   box-sizing: border-box;
   text-align: center;
   display: flex;
