@@ -190,11 +190,11 @@ srtop.reveal('.home .instagram', { interval: 600 });
 srtop.reveal('.home .dev', { interval: 600 });
 
 /* SCROLL ABOUT */
-srtop.reveal('.about .content h3', { delay: 200 });
-srtop.reveal('.about .content .tag', { delay: 200 });
-srtop.reveal('.about .content p', { delay: 200 });
-srtop.reveal('.about .content .box-container', { delay: 200 });
-srtop.reveal('.about .content .resumebtn', { delay: 200 });
+srtop.reveal('.about .content h3', { delay: 100 });
+srtop.reveal('.about .content .tag', { delay: 100 });
+srtop.reveal('.about .content p', { delay: 100 });
+srtop.reveal('.about .content .box-container', { delay: 100 });
+srtop.reveal('.about .content .resumebtn', { delay: 100 });
 
 
 /* SCROLL SKILLS */
@@ -202,7 +202,7 @@ srtop.reveal('.skills .container', { interval: 200 });
 srtop.reveal('.skills .container .bar', { delay: 400 });
 
 /* SCROLL EDUCATION */
-srtop.reveal('.education .box', { interval: 200 });
+srtop.reveal('.education .box', { interval: 100 });
 
 /* SCROLL PROJECTS */
 srtop.reveal('.work .box', { interval: 200 });
