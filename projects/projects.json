@@ -40,30 +40,30 @@
     }
   },
   {
-    "name": "SolidWorks Design Portfolio",
-    "desc": "Please click on the link to view some of the designs I made with SolidWorks",
+    "name": "Industrial Design Portfolio",
+    "desc": "Please click on the link to view some of the designs I made with different CAD softwares",
     "image": "weatherlyandroid",
-    "category": "industrial-design",
+    "category": "download",
     "links": {
       "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/navierstokes95//weatherly-android"
     }
   },
   {
-    "name": "Onshape Design Portfolio",
-    "desc": "Please click on the link to view some of the designs I made with Onshape",
+    "name": "Industrial Automation Portfolio",
+    "desc": "Please click on the link to view professional industrial automation projects I completed",
     "image": "weatherlyandroid",
-    "category": "industrial-design",
+    "category": "download",
     "links": {
       "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/navierstokes95//weatherly-android"
     }
   },
   {
-    "name": "Fusion 360 Design Portfolio",
-    "desc": "Please click on the link to view some of the designs I made with Fusion 360",
+    "name": "Research and Innovation",
+    "desc": "Ongoing and completed R&D projects",
     "image": "weatherlyandroid",
-    "category": "industrial-design",
+    "category": "download",
     "links": {
       "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/navierstokes95//weatherly-android"

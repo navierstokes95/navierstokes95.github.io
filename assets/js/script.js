@@ -140,7 +140,7 @@ function showProjects(projects) {
   let projectsContainer = document.querySelector("#work .box-container");
   let projectHTML = "";
   projects.slice(0, 3).forEach(project => {
-      if (project.category !== 'all') {
+      if (project.category == 'download') {
           projectHTML += `
         <div class="box tilt">
           <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="${project.name}" />
