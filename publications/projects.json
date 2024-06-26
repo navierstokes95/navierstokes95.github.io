@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Smart Electrical Energy Monitoring System",
+    "desc": "Energy consumption data is read from multiple smart energy meters using Siemens s7-1200 PLC via MODBUS RTU. Data is then sent to Thingsboard cloud via Node-Red as MQTT client. Both local and cloud dashboard is designed.",
+    "image": "notystackandroid",
+    "category": "automation",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//notystack-android"
+    }
+  },
+  {
+    "name": "Cloud based OEE Monitoring for CNC Machine",
+    "desc": "HAAS CNC CM-1 Machine parameters are read via MTConnect, Ethernet and HTTP request using Node-red as server. The data is then used to calculate OEE parameters. The data is sent to Thingsboard cloud and dashboard is designed.",
+    "image": "sppuprepandroid",
+    "category": "automation",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//sppu-prep-android"
+    }
+  },
+  {
+    "name": "ThingsBoard White Labeling",
+    "desc": "White labeling, custom logo, custom widget, text, and UI developed on top of Thingboard CE. Changes are tested in Docker.",
+    "image": "newsboxandroid",
+    "category": "iot-development",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//newsbox-android"
+    }
+  },
+  {
+    "name": "Collaborative Robot Programming",
+    "desc": "Programming of a Neuromeka COBOT for pick and place task",
+    "image": "weatherlyandroid",
+    "category": "automation",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//weatherly-android"
+    }
+  },
+  {
+    "name": "Industrial Design Portfolio",
+    "desc": "Please click on the link to view some of the designs I made with different CAD softwares",
+    "image": "weatherlyandroid",
+    "category": "download",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//weatherly-android"
+    }
+  },
+  {
+    "name": "Industrial Automation Portfolio",
+    "desc": "Please click on the link to view professional industrial automation projects I completed",
+    "image": "weatherlyandroid",
+    "category": "download",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//weatherly-android"
+    }
+  },
+  {
+    "name": "Research and Innovation",
+    "desc": "Ongoing and completed R&D projects",
+    "image": "weatherlyandroid",
+    "category": "download",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//weatherly-android"
+    }
+  },
+  {
+    "name": "Manufacturing of a pesticide spraying drone for agricultural application",
+    "desc": "I have modified the design of F550 hexacopter frame and built control system to carry and spray pesticide",
+    "image": "weatherlyandroid",
+    "category": "rnd",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//weatherly-android"
+    }
+  },
+  {
+    "name": "Improving Efficiency Of Agricultural Irrigation Pumps By Manufacturing Impellers Using 3D Printing Technology",
+    "desc": "I have modified the casting process to manufacture centrifugal pump impellers. I have introduced 3D printing for pattern manufacturing, which resulted in higher efficiency of the pump",
+    "image": "weatherlyandroid",
+    "category": "rnd",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/navierstokes95//weatherly-android"
+    }
+  }
+]
