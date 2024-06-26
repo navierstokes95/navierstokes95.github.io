@@ -41,7 +41,7 @@ function getProjects() {
 
 
 function showProjects(projects) {
-    let projectsContainer = document.querySelector(".work .box-container");
+    let projectsContainer = document.querySelector(".publications .box-container");
     let projectsHTML = "";
     projects.forEach(project => {
         projectsHTML += `
