@@ -20,7 +20,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Projects | Portfolio Arif Ahmed";
+            document.title = "Publications | Arif Ahmed";
             $("#favicon").attr("href", "/assets/images/favicon.png");
         }
         else {
@@ -30,9 +30,9 @@ document.addEventListener('visibilitychange',
     });
 
 
-// fetch projects start
-function getProjects() {
-    return fetch("projects.json")
+// fetch publications start
+function getPublications() {
+    return fetch("publications.json")
         .then(response => response.json())
         .then(data => {
             return data
@@ -40,14 +40,14 @@ function getProjects() {
 }
 
 
-function showProjects(projects) {
-    let projectsContainer = document.querySelector(".publications .box-container");
-    let projectsHTML = "";
-    projects.forEach(project => {
-        projectsHTML += `
+function showPublications(publications) {
+    let publicationsContainer = document.querySelector(".publications .box-container");
+    let publicationsHTML = "";
+    publications.forEach(project => {
+        publicationsHTML += `
         <div class="grid-item ${project.category}">
         <div class="box tilt" style="width: 350px; margin: 1rem">
-      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
+      <img draggable="false" src="/assets/images/publications/${project.image}.png" alt="project" />
       <div class="content">
         <div class="tag">
         <h3>${project.name}</h3>
@@ -63,7 +63,7 @@ function showProjects(projects) {
     </div>
     </div>`
     });
-    projectsContainer.innerHTML = projectsHTML;
+    publicationsContainer.innerHTML = publicationsHTML;
 
     // isotope filter products
     var $grid = $('.box-container').isotope({
@@ -83,6 +83,6 @@ function showProjects(projects) {
     });
 }
 
-getProjects().then(data => {
-    showProjects(data);
+getPublications().then(data => {
+    showPublications(data);
 })
