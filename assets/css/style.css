@@ -17,7 +17,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: #D4F1F4;
+  background: #ffffff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -79,7 +79,7 @@ section {
 }
 .heading {
   font-size: 3.5rem;
-  color: #042533;
+  color: #ffffff;
   font-weight: 800;
   text-align: center;
 }
@@ -459,7 +459,7 @@ header .navbar ul li a:hover {
 /* skills section starts */
 .skills {
   min-height: 70vh;
-  background: linear-gradient(to bottom, #57059e, #4a00e0);
+  background: linear-gradient(to bottom, #042533, #07445e);
 }
 .skills h2 {
   color: #fff;
@@ -488,7 +488,7 @@ header .navbar ul li a:hover {
 
 .buttons button {
   padding: 10px 20px;
-  background-color: rgba(0, 2, 68, 0.8);
+  background-color: rgba(0, 49, 68, 0.863);
   color: white;
   border: none;
   border-radius: 5px;
@@ -718,7 +718,7 @@ header .navbar ul li a:hover {
   align-items: center;
   width: 100%;
   padding: 1rem;
-  background: #FFDD00;
+  background: #042533;
   box-sizing: border-box; /* Includes padding in the element's total width and height */
   word-wrap: break-word; /* Ensures long words break into the next line */
 }
@@ -809,7 +809,7 @@ header .navbar ul li a:hover {
   content: "";
   position: absolute;
   width: 6px;
-  background: #010124;
+  background: #042533;
   top: 0;
   bottom: 0;
   left: 50%;
