@@ -675,8 +675,11 @@ header .navbar ul li a:hover {
 }
 /* education media queries ends*/
 /* education section ends */
+
 .publication {
   background: #cfe2eb;
+  min-height: 00vh;
+  padding: 2rem 9%;
 }
 
 .publication h2 {
