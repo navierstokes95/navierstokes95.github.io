@@ -34,7 +34,7 @@ html::-webkit-scrollbar {
   width: 0.8rem;
 }
 html::-webkit-scrollbar-track {
-  background: #D4F1F4;
+  background: #ffffff;
 }
 html::-webkit-scrollbar-thumb {
   background: #189AB4;
@@ -46,7 +46,7 @@ html::-webkit-scrollbar-thumb {
   top: 0;
   left: 0;
   z-index: 10000;
-  background: #D4F1F4;
+  background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,13 +159,13 @@ header .navbar ul li a:hover {
     display: block;
     padding: 1rem;
     text-align: left;
-    color: #D4F1F4;
+    color: #FFFFFF;
     font-size: 2rem;
   }
   header .navbar ul li a.active,
   header .navbar ul li a:hover {
     padding: 1rem;
-    color: #D4F1F4;
+    color: #FFFFFF;
     border-radius: 0.5rem;
     border-bottom: 0.5rem solid #75E6DA;
   }
@@ -344,7 +344,7 @@ header .navbar ul li a:hover {
 /* hero section end */
 /* about section starts */
 .about {
-  background: #D4F1F4;
+  background: #FFFFFF;
 }
 .about .row {
   display: flex;
