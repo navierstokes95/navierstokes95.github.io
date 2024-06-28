@@ -675,6 +675,103 @@ header .navbar ul li a:hover {
 }
 /* education media queries ends*/
 /* education section ends */
+.publication {
+  background: #cfe2eb;
+}
+
+.publication h2 {
+  color: #042533;
+  padding: 1rem;
+}
+
+.publication .heading span {
+  color: #189AB4;
+}
+
+.publication .publication-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem;
+}
+
+.publication .publication-container .card {
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  background: #ffffff;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.publication .publication-container .card:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.publication .publication-container .card .p-8 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+}
+
+.publication .publication-container .card h2 {
+  font-size: 1.5rem;
+  color: #042533;
+  margin-bottom: 1rem;
+}
+
+.publication .publication-container .card p {
+  color: #042533;
+  margin: 0.5rem 0;
+}
+
+.publication .viewall {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.publication .viewall .btn {
+  position: relative;
+  line-height: 0;
+  font-weight: 700;
+  text-align: center;
+  padding: 1.7rem 3rem;
+  border-radius: 0.5em;
+  transition: 0.3s;
+  color: #fff;
+  background: #042533;
+  box-shadow: 0px 5px 10px rgba(5, 68, 94, 0.6);
+  font-family: "Nunito", sans-serif;
+}
+
+.publication .viewall .btn span {
+  font-weight: 600;
+  font-size: 1.7rem;
+  font-family: "Nunito", sans-serif;
+}
+
+.publication .viewall .btn i {
+  margin-left: 0.3rem;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.publication .viewall .btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.publication .viewall .btn:hover i {
+  transform: translateX(5px);
+}
+
 /* work section starts */
 .work {
   background: linear-gradient(to bottom, #042533, #07445e)
