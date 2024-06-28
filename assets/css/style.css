@@ -17,7 +17,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: #ffffff;
+  background: #cfe2eb;
   font-family: "Poppins", sans-serif;
 }
 
@@ -90,7 +90,7 @@ header .logo {
   font-size: 1.9rem;
   font-weight: 800;
   text-decoration: none;
-  color: #042533;
+  color: #ffffff;
 }
 header .logo i {
   font-size: 2.2rem;
@@ -570,7 +570,7 @@ header .navbar ul li a:hover {
 /* skills section ends */
 /* education section starts */
 .education {
-  background: #F0F5FA;
+  background: #cfe2eb;
   min-height: 60vh;
 }
 .education .quote {
@@ -722,6 +722,13 @@ header .navbar ul li a:hover {
   text-align: center;
   padding: 2rem;
 }
+
+.publication .publication-container .card p {
+  font-size: 1.2rem; /* Adjust the size as needed */
+  color: #042533;
+  margin: 0.5rem 0;
+}
+
 
 .publication .publication-container .card h2 {
   font-size: 1.5rem;
