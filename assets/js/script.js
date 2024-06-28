@@ -190,11 +190,12 @@ srtop.reveal('.home .instagram', { interval: 600 });
 srtop.reveal('.home .dev', { interval: 600 });
 
 /* SCROLL ABOUT */
-srtop.reveal('.about .content h3', { delay: 100 });
+srtop.reveal('.about .content', { delay: 200 });
+/*srtop.reveal('.about .content h3', { delay: 100 });
 srtop.reveal('.about .content .tag', { delay: 100 });
 srtop.reveal('.about .content p', { delay: 100 });
 srtop.reveal('.about .content .box-container', { delay: 100 });
-srtop.reveal('.about .content .resumebtn', { delay: 100 });
+srtop.reveal('.about .content .resumebtn', { delay: 100 });*/
 
 
 /* SCROLL SKILLS */

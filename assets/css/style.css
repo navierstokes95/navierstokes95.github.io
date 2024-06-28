@@ -79,7 +79,7 @@ section {
 }
 .heading {
   font-size: 3.5rem;
-  color: #ffffff;
+  color: #042533;
   font-weight: 800;
   text-align: center;
 }
@@ -127,12 +127,15 @@ header .navbar ul li a:hover {
 #menu {
   font-size: 3rem;
   cursor: pointer;
-  color: #042533;
+  color: #ffff;
   display: none;
 }
 @media (max-width: 768px) {
   #menu {
     display: block;
+  }
+  header{
+    height: 4rem;
   }
   header .navbar {
     position: fixed;
@@ -546,6 +549,12 @@ header .navbar ul li a:hover {
 
 /* skills media queries starts*/
 @media screen and (max-width: 600px) {
+  .skills .buttons button {
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    flex: 1 1 auto; /* Allow buttons to grow and shrink */
+    margin: 0.5rem 0; /* Add margin between buttons */
+  }
   .skills .container {
     padding: 0;
     margin: 0;
@@ -555,10 +564,6 @@ header .navbar ul li a:hover {
     margin: 1rem;
     padding: 2rem 0.2rem 2rem 0.2rem;
     gap: 1rem;
-  }
-  .skills .container {
-    margin-top: 5px;
-    width: 100%;
   }
 }
 /* skills media queries ends*/
