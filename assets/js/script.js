@@ -42,7 +42,7 @@ $(document).ready(function () {
       event.preventDefault();
       emailjs.init("qaa0s-uOH3nIRUoaK");
 
-      emailjs.sendForm('service_vtn3g8t', 'template_contact', '#contact-form')
+      emailjs.sendForm('service_vtn3g8t', 'template_44fk6xb', '#contact-form')
           .then(function (response) {
               console.log('SUCCESS!', response.status, response.text);
               document.getElementById("contact-form").reset();
