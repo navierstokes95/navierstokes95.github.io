@@ -42,7 +42,7 @@
   {
     "name": "Industrial Design Portfolio",
     "desc": "Please click on the link to view some of the designs I made with different CAD softwares",
-    "image": "weatherlyandroid",
+    "image": "design_cover",
     "category": "download",
     "links": {
       "view": "https://docs.google.com/presentation/d/1hnn8vPOsdmgnEJEJj1w82Ii4WHbNjrfaPbo6q4C4NwY/present?slide=id.p",
@@ -52,7 +52,7 @@
   {
     "name": "Industrial Automation Portfolio",
     "desc": "Please click on the link to view professional industrial automation projects I completed",
-    "image": "weatherlyandroid",
+    "image": "iot_cover",
     "category": "download",
     "links": {
       "view": "https://docs.google.com/presentation/d/1McFMMW7uu4Vuu5cweq6dFg3IsjsdJABu3mq3INuxM1s/present?slide=id.gcb9a0b074_1_0",
