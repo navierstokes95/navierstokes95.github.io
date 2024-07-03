@@ -1085,7 +1085,14 @@ header .navbar ul li a:hover {
 /* contact section starts */
 .contact {
   background: #e5ecfb;
-  min-height: 60vh;
+  min-height: 60vh; /* or 100vh if you want it to cover the full viewport height */
+  display: flex; /* Enable flexbox on the contact section */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  flex-direction: column; /* Align items vertically */
+}
+.contact .heading {
+  margin-bottom: 2rem; /* Add some space below the heading */
 }
 .contact .container {
   max-width: 1050px;
