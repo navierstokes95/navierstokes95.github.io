@@ -143,7 +143,7 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 // <!-- tilt js effect ends -->
 
 function showProjects(projects) {
-  let projectsContainer = document.querySelector("#work .box-container");
+  let projectsContainer = document.querySelector(".work .box-container");
   let projectHTML = "";
   projects.forEach(project => {
       if (project.category === 'download') {
