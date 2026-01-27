@@ -259,17 +259,6 @@ const App: React.FC = () => {
   const [formMessage, setFormMessage] = useState('');
   const [formLoadTime] = useState(Date.now());
 
-  useEffect(() => {
-    // Re-render hCaptcha if script is already loaded and form is on screen
-    if (typeof (window as any).hcaptcha !== 'undefined' && document.querySelector('.h-captcha')) {
-      try {
-        (window as any).hcaptcha.render(document.querySelector('.h-captcha'));
-      } catch (e) {
-        // Already rendered or error
-      }
-    }
-  }, []);
-
   const categories = useMemo(() => ["All", "Automation and IIoT", "Industrial Design", "Research"], []);
 
   const filteredProjects = useMemo(() => {
@@ -294,14 +283,6 @@ const App: React.FC = () => {
       return;
     }
 
-    // hCaptcha validation
-    const hCaptchaToken = (e.target as any).querySelector('[name="h-captcha-response"]')?.value;
-    if (!hCaptchaToken) {
-      setFormStatus('error');
-      setFormMessage('Please complete the hCaptcha verification.');
-      return;
-    }
-
     setFormStatus('sending');
 
     try {
@@ -322,7 +303,6 @@ const App: React.FC = () => {
           from_name: "Portfolio Contact Form",
           to_email: "arifahmed.me14@gmail.com",
           botcheck: (e.target as any).botcheck?.checked || false,
-          "h-captcha-response": hCaptchaToken,
         }),
       });
 
@@ -795,15 +775,6 @@ const App: React.FC = () => {
                       className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-blue-600 outline-none transition-all h-32"
                       placeholder="Tell me about your project..."
                     ></textarea>
-                  </div>
-
-                  {/* hCaptcha Widget */}
-                  <div className="flex justify-center py-4 min-h-[78px] bg-gray-50/50 rounded-xl border border-dashed border-gray-200">
-                    <div
-                      className="h-captcha"
-                      data-sitekey="50b27034-ac92-410e-923f-9173c333bb6a"
-                      style={{ height: '78px' }}
-                    ></div>
                   </div>
 
                   {formStatus === 'success' && (
