@@ -278,17 +278,22 @@ const App: React.FC = () => {
     const timeToSubmit = Date.now() - formLoadTime;
     if (timeToSubmit < 3000) {
       console.warn("Fast submission detected - likely bot");
-      // We still "pretend" to send it or just show an error
       setFormStatus('error');
       setFormMessage('Please take a moment to review your message before sending.');
+      return;
+    }
+
+    // hCaptcha validation
+    const hCaptchaToken = (e.target as any).querySelector('[name="h-captcha-response"]')?.value;
+    if (!hCaptchaToken) {
+      setFormStatus('error');
+      setFormMessage('Please complete the hCaptcha verification.');
       return;
     }
 
     setFormStatus('sending');
 
     try {
-      // Use Web3Forms - simple and effective for static sites
-      // The user will need to get a free access key from web3forms.com
       const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "5613c276-0d16-4394-a5f4-630d3a7eff14";
 
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -305,8 +310,8 @@ const App: React.FC = () => {
           subject: `New Message from ${formData.name} via Portfolio`,
           from_name: "Portfolio Contact Form",
           to_email: "arifahmed.me14@gmail.com",
-          // Anti-spam field
           botcheck: (e.target as any).botcheck?.checked || false,
+          "h-captcha-response": hCaptchaToken,
         }),
       });
 
@@ -315,7 +320,6 @@ const App: React.FC = () => {
         setFormStatus('success');
         setFormMessage('Message sent successfully! I will get back to you soon.');
         setFormData({ name: '', email: '', message: '' });
-        // Clear success message after 5 seconds
         setTimeout(() => setFormStatus('idle'), 5000);
       } else {
         setFormStatus('error');
@@ -780,6 +784,11 @@ const App: React.FC = () => {
                       className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-blue-600 outline-none transition-all h-32"
                       placeholder="Tell me about your project..."
                     ></textarea>
+                  </div>
+
+                  {/* hCaptcha Widget */}
+                  <div className="flex justify-center py-2">
+                    <div className="h-captcha" data-sitekey="50b27034-ac92-410e-923f-9173c333bb6a"></div>
                   </div>
 
                   {formStatus === 'success' && (
