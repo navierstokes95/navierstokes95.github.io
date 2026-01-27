@@ -67,24 +67,50 @@ export const EXPERIENCES: ExperienceItem[] = [
 export const PROJECTS: ProjectItem[] = [
   {
     title: "Industrial Energy Monitoring Dashboard",
-    description: "Created IoT based real-time dashboard for tracking industrial energy usage.",
+    description: "Created IoT based real-time SCADA dashboard for tracking industrial energy usage.",
+    fullDescription: "Created IoT based real-time SCADA dashboard for tracking industrial energy usage.",
+    impact: "The energy consumption reduction of an industry needs a data driven approach, rather than randomly turning loads on or off. By leveraging Siemens PLC, MODBUS, MQTT, Node-RED, we were able to build a real time SCADA dashboard with reporting facilities that can track energy consumption real-time, by days, weeks or month. This significantly helps assess performance of energy conservation initiatives and quickly make adjustments.",
+    objectives: [
+      "Build IoT based SCADA dashboard to track electrical energy usage",
+      "Implementation of Industrial IoT using open-source cloud technologies",
+      "Build training modules and curriculum to train on smart energy management"
+    ],
     tags: ["Siemens PLC", "MODBUS", "MQTT", "Node-RED"],
     category: "Automation and IIoT",
-    image: "" // Path to project image (e.g., "/projects/energy.jpg")
+    image: "/energy.jpg",
+    demoUrl: "https://demo.thingsboard.io/dashboard/0982fa20-349a-11ed-89c2-7b8e9c33fd73?publicId=88e774d0-367f-11ed-89c2-7b8e9c33fd73"
   },
   {
     title: "CNC Machine OEE Monitoring",
-    description: "Developed an OEE monitoring dashboard for CNCs using Ethernet Request/Response protocols.",
-    tags: ["Haas/Fanuc", "MTConnect", "MQTT", "Node-RED"],
+    description: "Designed and implemented a CNC machine OEE monitoring dashboard integrating Haas MTConnect, Fanuc FOCAS API, MQTT, and Ethernet request/response protocols.",
+    fullDescription: "Designed and implemented a CNC machine OEE monitoring dashboard integrating Haas MTConnect, Fanuc FOCAS API, MQTT, and Ethernet request/response protocols to acquire real-time production data from multiple controller platforms.",
+    impact: "Modern manufacturing environments demand high-volume, high-quality production with minimal rejection under strict scheduling constraints. Achieving Six Sigma–level performance requires accurate Overall Equipment Effectiveness (OEE) evaluation, which is inefficient and error-prone when based on manual logbooks.\n\nThis project addressed that gap by integrating industrial IoT frameworks and cloud-connected data pipelines with CNC systems. Machine data was extracted through MTConnect and FOCAS interfaces, processed using Node-RED, and transmitted via MQTT to develop a unified OEE analytics dashboard. The system supports multi-vendor CNC environments, enabling standardized performance monitoring across heterogeneous controllers.",
+    objectives: [
+      "Enhance manufacturing efficiency through advanced OEE-based performance analytics",
+      "Deploy industrial IoT architecture for real-time machine monitoring and production insight",
+      "Enable data-driven decision-making for quality improvement and downtime reduction",
+      "Establish scalable communication between diverse CNC control platforms"
+    ],
+    tags: ["Haas MTConnect", "Fanuc FOCAS", "MQTT", "Node-RED", "IIoT"],
     category: "Automation and IIoT",
-    image: ""
+    image: "/oee.png",
+    demoUrl: "https://demo.thingsboard.io/dashboard/16adb630-38a0-11ee-9079-75f587c23e37?publicId=88e774d0-367f-11ed-89c2-7b8e9c33fd73"
   },
   {
     title: "Collaborative Robot-CNC Integration",
-    description: "Integrated collaborative robot with CNC machines for machine tending.",
-    tags: ["UR5 Cobot", "Fanuc CNC Controller"],
+    description: "Commissioned and deployed a 6-axis collaborative robot (Universal Robots) integrated with a CNC machining cell to achieve lights-out manufacturing.",
+    fullDescription: "Commissioned and deployed a 6-axis collaborative robot (Universal Robots) integrated with a CNC machining cell to achieve lights-out manufacturing, enabling continuous 24/7 autonomous production with minimal human intervention.",
+    impact: "To meet modern manufacturing demands for high productivity, reduced labor dependency, and consistent quality, this project focused on robotic automation of machine tending operations. The CNC machining process is programmed through CAM software, while the collaborative robot performs all peripheral tasks, including part loading/unloading, machine door operation, and keypad-based machine control.\n\nThe system communicates with the CNC via digital I/O interfaces to monitor machining status signals. Upon cycle completion, the robot coordinates with a pneumatically actuated vise system to ensure accurate clamping and unclamping of components, maintaining repeatability and process reliability. This integration significantly reduces idle time, improves spindle utilization, and supports unattended operation.\n\nFurther development involves enhancing system intelligence through machine vision and AI-based object recognition, enabling the robot to perform random bin picking and precise part positioning inside the vise. This advancement aims to transition the system from structured automation toward adaptive robotic manufacturing, capable of handling variable part orientation and increasing operational flexibility.",
+    objectives: [
+      "Enable lights-out CNC production through robotic machine tending",
+      "Improve machine utilization and reduce manual handling time",
+      "Integrate robot–CNC communication via industrial I/O signaling",
+      "Implement pneumatic workholding automation for precise part clamping",
+      "Advance toward vision-guided and AI-driven robotic manipulation for flexible manufacturing systems"
+    ],
+    tags: ["UR5 Cobot", "Fanuc CNC", "Industrial I/O", "Pneumatics", "Lights-out Manufacturing"],
     category: "Automation and IIoT",
-    image: ""
+    image: "/cobot.png"
   },
   {
     title: "Reverse Engineering of Industrial Components",

@@ -10,9 +10,13 @@ export interface ExperienceItem {
 export interface ProjectItem {
   title: string;
   description: string;
+  fullDescription?: string;
+  impact?: string;
+  objectives?: string[];
   tags: string[];
   category: "Automation and IIoT" | "Industrial Design" | "Research";
   image?: string;
+  demoUrl?: string;
 }
 
 export interface SkillCategory {

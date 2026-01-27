@@ -192,29 +192,28 @@ const ProjectDetail = ({ project, onBack }: { project: ProjectItem, onBack: () =
 
         <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Project Overview</h2>
-          <p className="mb-8">{project.description}</p>
+          <p className="mb-8">{project.fullDescription || project.description}</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Technical Impact & Approach</h2>
-          <p className="mb-6">
-            This project involved the integration of modern engineering principles to solve industrial bottlenecks.
-            By leveraging {project.tags.join(', ')}, we were able to significantly enhance efficiency and reliability.
-          </p>
+          <div className="space-y-4 mb-8">
+            {(project.impact || `This project involved the integration of modern engineering principles to solve industrial bottlenecks. By leveraging ${project.tags.join(', ')}, we were able to significantly enhance efficiency and reliability.`).split('\n\n').map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
 
           <div className="bg-gray-50 border border-gray-100 rounded-2xl p-8 mb-12">
             <h3 className="text-xl font-bold text-gray-900 mb-4">Key Objectives</h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0"></div>
-                <span>Optimization of manufacturing processes using advanced simulations.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0"></div>
-                <span>Implementation of IoT architectures for real-time monitoring and control.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0"></div>
-                <span>Iterative prototyping using additive manufacturing technologies.</span>
-              </li>
+              {(project.objectives || [
+                "Optimization of manufacturing processes using advanced simulations.",
+                "Implementation of IoT architectures for real-time monitoring and control.",
+                "Iterative prototyping using additive manufacturing technologies."
+              ]).map((objective, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0"></div>
+                  <span>{objective}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -223,10 +222,22 @@ const ProjectDetail = ({ project, onBack }: { project: ProjectItem, onBack: () =
               <Layers size={20} />
               View Full Documentation
             </button>
-            <button className="flex-1 px-8 py-4 bg-white text-gray-900 font-bold rounded-xl border border-gray-200 shadow-sm hover:bg-gray-50 transition-all flex items-center justify-center gap-2">
-              <Globe size={20} />
-              Live Demo / Reference
-            </button>
+            {project.demoUrl ? (
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 px-8 py-4 bg-white text-gray-900 font-bold rounded-xl border border-gray-200 shadow-sm hover:bg-gray-50 transition-all flex items-center justify-center gap-2"
+              >
+                <Globe size={20} />
+                Live Demo / Reference
+              </a>
+            ) : (
+              <button className="flex-1 px-8 py-4 bg-white text-gray-900 font-bold rounded-xl border border-gray-200 shadow-sm hover:bg-gray-50 transition-all flex items-center justify-center gap-2">
+                <Globe size={20} />
+                Live Demo / Reference
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -278,7 +289,7 @@ const App: React.FC = () => {
     try {
       // Use Web3Forms - simple and effective for static sites
       // The user will need to get a free access key from web3forms.com
-      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
+      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "5613c276-0d16-4394-a5f4-630d3a7eff14";
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -413,7 +424,7 @@ const App: React.FC = () => {
 
               <div className="flex items-center justify-center lg:justify-start gap-6 text-gray-500">
                 <a href={`https://linkedin.com/in/${PERSONAL_INFO.linkedin}`} target="_blank" className="hover:text-blue-600 transition-colors"><Linkedin size={24} /></a>
-                <a href="https://github.com" target="_blank" className="hover:text-gray-900 transition-colors"><Github size={24} /></a>
+                <a href="https://github.com/navierstokes95/" target="_blank" className="hover:text-gray-900 transition-colors"><Github size={24} /></a>
                 <button onClick={handleEmailClick} className="hover:text-red-500 transition-colors"><Mail size={24} /></button>
                 <div className="w-px h-6 bg-gray-300 mx-2"></div>
                 <div className="flex items-center gap-2 text-sm font-medium">
@@ -455,7 +466,7 @@ const App: React.FC = () => {
           <div className="space-y-12">
             {EXPERIENCES.map((exp, idx) => (
               <div key={idx} className="relative pl-8 md:pl-0">
-                <div className="md:grid md:grid-cols-4 md:gap-8">
+                <div className="md:grid md:grid-cols-4 md:gap-12">
                   <div className="md:text-right mb-4 md:mb-0">
                     <span className="text-blue-600 font-mono font-bold text-sm tracking-widest">{exp.period}</span>
                     <p className="text-gray-400 text-xs mt-1 font-medium">{exp.location}</p>
@@ -463,9 +474,9 @@ const App: React.FC = () => {
 
                   <div className="md:col-span-3 relative pb-12 last:pb-0">
                     {idx !== EXPERIENCES.length - 1 && (
-                      <div className="absolute left-[-21px] md:left-[-33px] top-6 bottom-0 w-0.5 bg-gray-100"></div>
+                      <div className="absolute left-[-21px] md:left-[-25px] top-6 bottom-0 w-0.5 bg-gray-100"></div>
                     )}
-                    <div className="absolute left-[-25px] md:left-[-37px] top-1.5 w-3 h-3 rounded-full bg-blue-600 ring-4 ring-blue-100"></div>
+                    <div className="absolute left-[-25px] md:left-[-30px] top-1.5 w-3 h-3 rounded-full bg-blue-600 ring-4 ring-blue-100"></div>
 
                     <h3 className="text-2xl font-bold text-gray-900 mb-1">{exp.role}</h3>
                     <h4 className="text-lg font-semibold text-blue-600 mb-4">{exp.company}</h4>
