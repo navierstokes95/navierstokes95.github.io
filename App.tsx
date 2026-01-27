@@ -259,6 +259,17 @@ const App: React.FC = () => {
   const [formMessage, setFormMessage] = useState('');
   const [formLoadTime] = useState(Date.now());
 
+  useEffect(() => {
+    // Re-render hCaptcha if script is already loaded and form is on screen
+    if (typeof (window as any).hcaptcha !== 'undefined' && document.querySelector('.h-captcha')) {
+      try {
+        (window as any).hcaptcha.render(document.querySelector('.h-captcha'));
+      } catch (e) {
+        // Already rendered or error
+      }
+    }
+  }, []);
+
   const categories = useMemo(() => ["All", "Automation and IIoT", "Industrial Design", "Research"], []);
 
   const filteredProjects = useMemo(() => {
@@ -787,8 +798,12 @@ const App: React.FC = () => {
                   </div>
 
                   {/* hCaptcha Widget */}
-                  <div className="flex justify-center py-2">
-                    <div className="h-captcha" data-sitekey="50b27034-ac92-410e-923f-9173c333bb6a"></div>
+                  <div className="flex justify-center py-4 min-h-[78px] bg-gray-50/50 rounded-xl border border-dashed border-gray-200">
+                    <div
+                      className="h-captcha"
+                      data-sitekey="50b27034-ac92-410e-923f-9173c333bb6a"
+                      style={{ height: '78px' }}
+                    ></div>
                   </div>
 
                   {formStatus === 'success' && (
