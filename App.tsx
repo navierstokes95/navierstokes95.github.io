@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, Suspense, lazy } from 'react';
 import {
   Menu,
   X,
@@ -35,6 +35,9 @@ import {
 } from './data';
 import { ProjectItem } from './types';
 
+// Lazy load components that are not needed for initial paint
+const ProjectDetail = lazy(() => import('./ProjectDetail'));
+
 // Helper to decode obfuscated personal data
 const decodeSafeData = (str: string) => {
   try {
@@ -54,7 +57,6 @@ const Navbar = ({ onNavigate }: { onNavigate: (href: string) => void }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Reordered links based on user request
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
@@ -111,7 +113,6 @@ const Navbar = ({ onNavigate }: { onNavigate: (href: string) => void }) => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg animate-in slide-in-from-top duration-300">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -150,118 +151,10 @@ const SectionHeading = ({ children, subtitle, icon: Icon }: { children?: React.R
   </div>
 );
 
-const ProjectDetail = ({ project, onBack }: { project: ProjectItem, onBack: () => void }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  return (
-    <div className="min-h-screen bg-white pt-32 pb-24 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <button
-          onClick={onBack}
-          className="flex items-center gap-2 text-gray-500 hover:text-blue-600 font-semibold mb-8 transition-colors group"
-        >
-          <ChevronLeft className="group-hover:-translate-x-1 transition-transform" />
-          Back to Portfolio
-        </button>
-
-        <div className="mb-12">
-          <div className="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full uppercase tracking-widest mb-4">
-            {project.category}
-          </div>
-          <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight leading-tight">
-            {project.title}
-          </h1>
-          <div className="flex flex-wrap gap-2 mb-8">
-            {project.tags.map(tag => (
-              <span key={tag} className="px-4 py-1.5 bg-gray-100 text-gray-700 text-xs font-bold rounded-lg border border-gray-200">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="aspect-video w-full rounded-3xl overflow-hidden shadow-2xl mb-12 bg-gray-100">
-          <img
-            src={project.image || `https://picsum.photos/seed/${project.title}/1200/800`}
-            alt={project.title}
-            className="w-full h-full object-cover"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-
-        <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Project Overview</h2>
-          <p className="mb-8">{project.fullDescription || project.description}</p>
-
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Technical Impact & Approach</h2>
-          <div className="space-y-4 mb-8">
-            {(project.impact || `This project involved the integration of modern engineering principles to solve industrial bottlenecks. By leveraging ${project.tags.join(', ')}, we were able to significantly enhance efficiency and reliability.`).split('\n\n').map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
-          </div>
-
-          <div className="bg-gray-50 border border-gray-100 rounded-2xl p-8 mb-12">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Key Objectives</h3>
-            <ul className="space-y-3">
-              {(project.objectives || [
-                "Optimization of manufacturing processes using advanced simulations.",
-                "Implementation of IoT architectures for real-time monitoring and control.",
-                "Iterative prototyping using additive manufacturing technologies."
-              ]).map((objective, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0"></div>
-                  <span>{objective}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button className="flex-1 px-8 py-4 bg-gray-900 text-white font-bold rounded-xl shadow-lg hover:bg-black transition-all flex items-center justify-center gap-2">
-              <Layers size={20} />
-              View Full Documentation
-            </button>
-            {project.demoUrl ? (
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 px-8 py-4 bg-white text-gray-900 font-bold rounded-xl border border-gray-200 shadow-sm hover:bg-gray-50 transition-all flex items-center justify-center gap-2"
-              >
-                <Globe size={20} />
-                Live Demo / Reference
-              </a>
-            ) : (
-              <button className="flex-1 px-8 py-4 bg-white text-gray-900 font-bold rounded-xl border border-gray-200 shadow-sm hover:bg-gray-50 transition-all flex items-center justify-center gap-2">
-                <Globe size={20} />
-                Live Demo / Reference
-              </button>
-            )}
-          </div>
-        </div>
-
-        <div className="mt-16 pt-8 border-t border-gray-100">
-          <button
-            onClick={onBack}
-            className="flex items-center gap-2 text-gray-500 hover:text-blue-600 font-semibold transition-colors group"
-          >
-            <ChevronLeft className="group-hover:-translate-x-1 transition-transform" />
-            Back to Portfolio
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 const App: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
 
-  // Form State
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -285,11 +178,8 @@ const App: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Basic bot detection: was the form submitted too fast? (less than 3 seconds)
     const timeToSubmit = Date.now() - formLoadTime;
     if (timeToSubmit < 3000) {
-      console.warn("Fast submission detected - likely bot");
       setFormStatus('error');
       setFormMessage('Please take a moment to review your message before sending.');
       return;
@@ -298,14 +188,10 @@ const App: React.FC = () => {
     setFormStatus('sending');
 
     try {
-      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "5613c276-0d16-4394-a5f4-630d3a7eff14";
-
+      const accessKey = "5613c276-0d16-4394-a5f4-630d3a7eff14";
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: accessKey,
           name: formData.name,
@@ -347,10 +233,7 @@ const App: React.FC = () => {
   };
 
   const handleNavigation = (href: string) => {
-    if (selectedProject) {
-      setSelectedProject(null);
-    }
-
+    if (selectedProject) setSelectedProject(null);
     setTimeout(() => {
       const id = href.replace('#', '');
       const element = document.getElementById(id);
@@ -366,7 +249,13 @@ const App: React.FC = () => {
     return (
       <div className="selection:bg-blue-100 selection:text-blue-700">
         <Navbar onNavigate={handleNavigation} />
-        <ProjectDetail project={selectedProject} onBack={() => handleNavigation('#projects')} />
+        <Suspense fallback={
+          <div className="min-h-screen flex items-center justify-center">
+            <Loader2 className="animate-spin text-blue-600" size={48} />
+          </div>
+        }>
+          <ProjectDetail project={selectedProject} onBack={() => handleNavigation('#projects')} />
+        </Suspense>
         <footer className="py-12 bg-gray-50 border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-2xl font-black text-gray-900 mb-4 tracking-tighter">ARIF AHMED.</p>
@@ -451,6 +340,10 @@ const App: React.FC = () => {
                     src={(PERSONAL_INFO as any).profileImage || `https://picsum.photos/seed/${PERSONAL_INFO.name}/800/800`}
                     alt={PERSONAL_INFO.name}
                     className="w-full h-full object-cover rounded-xl"
+                    width="400"
+                    height="400"
+                    // @ts-ignore
+                    fetchpriority="high"
                   />
                   <div className="absolute inset-0 bg-blue-600/10 group-hover:bg-transparent transition-all"></div>
                 </div>
@@ -469,7 +362,6 @@ const App: React.FC = () => {
       <section id="experience" className="py-24 bg-white relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading subtitle="Timeline" icon={Briefcase}>Professional Experience</SectionHeading>
-
           <div className="space-y-12">
             {EXPERIENCES.map((exp, idx) => (
               <div key={idx} className="relative pl-8 md:pl-0">
@@ -478,16 +370,13 @@ const App: React.FC = () => {
                     <span className="text-blue-600 font-mono font-bold text-sm tracking-widest">{exp.period}</span>
                     <p className="text-gray-400 text-xs mt-1 font-medium">{exp.location}</p>
                   </div>
-
                   <div className="md:col-span-3 relative pb-12 last:pb-0">
                     {idx !== EXPERIENCES.length - 1 && (
                       <div className="absolute left-[-21px] md:left-[-25px] top-6 bottom-0 w-0.5 bg-gray-100"></div>
                     )}
                     <div className="absolute left-[-25px] md:left-[-30px] top-1.5 w-3 h-3 rounded-full bg-blue-600 ring-4 ring-blue-100"></div>
-
                     <h3 className="text-2xl font-bold text-gray-900 mb-1">{exp.role}</h3>
                     <h4 className="text-lg font-semibold text-blue-600 mb-4">{exp.company}</h4>
-
                     <ul className="space-y-3">
                       {exp.responsibilities.map((res, i) => (
                         <li key={i} className="flex items-start gap-3 text-gray-600 leading-relaxed">
@@ -508,7 +397,6 @@ const App: React.FC = () => {
       <section id="skills" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading subtitle="Expertise" icon={Cpu}>Technical Proficiency</SectionHeading>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {SKILLS.map((skillGroup, idx) => (
               <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
@@ -533,7 +421,6 @@ const App: React.FC = () => {
       <section id="projects" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading subtitle="Portfolio" icon={Layers}>Selected Work</SectionHeading>
-
           <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
             {categories.map((cat) => (
               <button
@@ -548,9 +435,8 @@ const App: React.FC = () => {
               </button>
             ))}
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500">
-            {filteredProjects.map((project, idx) => (
+            {filteredProjects.map((project) => (
               <div key={project.title} className="group relative bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 flex flex-col hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-in fade-in zoom-in duration-300">
                 <div className="aspect-video bg-gray-200 relative overflow-hidden">
                   <img
@@ -592,7 +478,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Portfolio Download Section */}
+      {/* Presentation Portfolios Section */}
       <section id="portfolios" className="py-24 bg-gray-50 border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -602,7 +488,6 @@ const App: React.FC = () => {
               Access my comprehensive technical portfolios for specific engineering domains.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { title: "Automation & IIoT", icon: Cpu, link: "https://docs.google.com/presentation/d/1McFMMW7uu4Vuu5cweq6dFg3IsjsdJABu3mq3INuxM1s/present?slide=id.gcb9a0b074_1_0" },
@@ -640,7 +525,6 @@ const App: React.FC = () => {
             <h2 className="text-4xl font-extrabold mt-2 tracking-tight">Trainings & Fellowships</h2>
             <div className="h-1.5 w-20 bg-blue-500 mt-4 rounded-full"></div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {TRAININGS.map((item, idx) => (
               <div key={idx} className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors">
@@ -663,7 +547,6 @@ const App: React.FC = () => {
       <section id="publications" className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading subtitle="Research" icon={BookOpen}>Academic Publications</SectionHeading>
-
           <div className="space-y-8">
             {PUBLICATIONS.map((pub, idx) => (
               <div key={idx} className="flex gap-6 group">
@@ -690,14 +573,11 @@ const App: React.FC = () => {
       <section id="education" className="py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SectionHeading subtitle="Foundation" icon={GraduationCap}>Education</SectionHeading>
-
           <div className="bg-white p-12 rounded-[3rem] shadow-sm border border-gray-100 relative overflow-hidden inline-block w-full">
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-50 rounded-full blur-2xl opacity-50"></div>
             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-indigo-50 rounded-full blur-2xl opacity-50"></div>
-
             <h3 className="text-3xl font-black text-gray-900 mb-2">{PERSONAL_INFO.education.degree}</h3>
             <p className="text-xl text-blue-600 font-bold mb-6">{PERSONAL_INFO.education.institution}</p>
-
             <div className="flex flex-wrap justify-center gap-6 text-gray-500 font-medium">
               <div className="flex items-center gap-2">
                 <Briefcase size={18} />
@@ -718,7 +598,6 @@ const App: React.FC = () => {
           <div className="bg-blue-600 rounded-[3rem] p-8 md:p-16 lg:p-24 relative overflow-hidden shadow-2xl">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full -ml-32 -mb-32"></div>
-
             <div className="grid lg:grid-cols-2 gap-16 relative z-10">
               <div>
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
@@ -727,7 +606,6 @@ const App: React.FC = () => {
                 <p className="text-blue-100 text-lg mb-10 max-w-md">
                   I'm open to discussing new R&D projects, automation challenges, or technical leadership opportunities.
                 </p>
-
                 <div className="space-y-6">
                   <div className="flex items-center gap-4 text-white">
                     <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center">
@@ -749,12 +627,9 @@ const App: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div className="bg-white rounded-3xl p-8 shadow-xl">
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* Honeypot field for spam protection */}
                   <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
-
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-1">Full Name</label>
                     <input
@@ -790,30 +665,26 @@ const App: React.FC = () => {
                       placeholder="Tell me about your project..."
                     ></textarea>
                   </div>
-
                   {formStatus === 'success' && (
                     <div className="p-4 bg-green-50 text-green-700 rounded-xl flex items-center gap-3 animate-in fade-in slide-in-from-top-2">
                       <CheckCircle2 size={20} />
                       <span className="text-sm font-medium">{formMessage}</span>
                     </div>
                   )}
-
                   {formStatus === 'error' && (
                     <div className="p-4 bg-red-50 text-red-700 rounded-xl flex items-center gap-3 animate-in fade-in slide-in-from-top-2">
                       <AlertCircle size={20} />
                       <span className="text-sm font-medium">{formMessage}</span>
                     </div>
                   )}
-
                   <button
                     type="submit"
                     disabled={formStatus === 'sending'}
-                    className={`w-full py-4 text-white font-bold rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-2 ${formStatus === 'sending' ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
-                      }`}
+                    className="w-full py-4 bg-blue-600 text-white font-bold rounded-xl shadow-lg hover:bg-blue-700 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
                   >
                     {formStatus === 'sending' ? (
                       <>
-                        <Loader2 size={20} className="animate-spin" />
+                        <Loader2 className="animate-spin" size={20} />
                         Sending...
                       </>
                     ) : (
@@ -831,10 +702,10 @@ const App: React.FC = () => {
       <footer className="py-12 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-2xl font-black text-gray-900 mb-4 tracking-tighter">ARIF AHMED.</p>
-          <div className="flex justify-center gap-6 mb-8">
-            <a href={`https://linkedin.com/in/${PERSONAL_INFO.linkedin}`} target="_blank" className="text-gray-400 hover:text-blue-600 transition-colors"><Linkedin size={20} /></a>
-            <a href="#" className="text-gray-400 hover:text-gray-900 transition-colors"><Github size={20} /></a>
-            <button onClick={handleEmailClick} className="text-gray-400 hover:text-red-500 transition-colors"><Mail size={20} /></button>
+          <div className="flex justify-center gap-6 text-gray-400 mb-6">
+            <a href={`https://linkedin.com/in/${PERSONAL_INFO.linkedin}`} target="_blank" className="hover:text-blue-600 transition-colors"><Linkedin size={20} /></a>
+            <a href="https://github.com/navierstokes95/" target="_blank" className="hover:text-gray-900 transition-colors"><Github size={20} /></a>
+            <button onClick={handleEmailClick} className="hover:text-red-500 transition-colors"><Mail size={20} /></button>
           </div>
           <p className="text-sm text-gray-500">
             &copy; {new Date().getFullYear()} {PERSONAL_INFO.name}. <br />
