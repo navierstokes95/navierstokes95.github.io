@@ -242,6 +242,16 @@ const ProjectDetail = ({ project, onBack }: { project: ProjectItem, onBack: () =
             )}
           </div>
         </div>
+
+        <div className="mt-16 pt-8 border-t border-gray-100">
+          <button
+            onClick={onBack}
+            className="flex items-center gap-2 text-gray-500 hover:text-blue-600 font-semibold transition-colors group"
+          >
+            <ChevronLeft className="group-hover:-translate-x-1 transition-transform" />
+            Back to Portfolio
+          </button>
+        </div>
       </div>
     </div>
   );
