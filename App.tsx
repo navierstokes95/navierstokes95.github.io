@@ -187,6 +187,8 @@ const ProjectDetail = ({ project, onBack }: { project: ProjectItem, onBack: () =
             src={project.image || `https://picsum.photos/seed/${project.title}/1200/800`}
             alt={project.title}
             className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -545,6 +547,8 @@ const App: React.FC = () => {
                     src={project.image || `https://picsum.photos/seed/${project.title}/600/400`}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute top-4 right-4">
