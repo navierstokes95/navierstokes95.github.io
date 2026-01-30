@@ -16,7 +16,7 @@ export const PERSONAL_INFO = {
     period: "2015 – 2019",
     location: "Dhaka, Bangladesh"
   },
-  profileImage: "/profile.jpg" // Path to your profile image (e.g., "/profile.jpg")
+  profileImage: "/profile.webp" // Path to your profile image (e.g., "/profile.webp")
 };
 
 export const EXPERIENCES: ExperienceItem[] = [
@@ -77,7 +77,7 @@ export const PROJECTS: ProjectItem[] = [
     ],
     tags: ["Siemens PLC", "MODBUS", "MQTT", "Node-RED"],
     category: "Automation and IIoT",
-    image: "/energy.jpg",
+    image: "/energy.webp",
     demoUrl: "https://demo.thingsboard.io/dashboard/0982fa20-349a-11ed-89c2-7b8e9c33fd73?publicId=88e774d0-367f-11ed-89c2-7b8e9c33fd73"
   },
   {
@@ -93,7 +93,7 @@ export const PROJECTS: ProjectItem[] = [
     ],
     tags: ["Haas MTConnect", "Fanuc FOCAS", "MQTT", "Node-RED", "IIoT"],
     category: "Automation and IIoT",
-    image: "/oee.png",
+    image: "/oee.webp",
     demoUrl: "https://demo.thingsboard.io/dashboard/16adb630-38a0-11ee-9079-75f587c23e37?publicId=88e774d0-367f-11ed-89c2-7b8e9c33fd73"
   },
   {
@@ -110,7 +110,7 @@ export const PROJECTS: ProjectItem[] = [
     ],
     tags: ["UR5 Cobot", "Fanuc CNC", "Industrial I/O", "Pneumatics", "Lights-out Manufacturing"],
     category: "Automation and IIoT",
-    image: "/cobot.png"
+    image: "/cobot.webp"
   },
   {
     title: "Reverse Engineering of Industrial Components",
@@ -126,7 +126,7 @@ export const PROJECTS: ProjectItem[] = [
     ],
     tags: ["Einscan", "Geomagic", "SolidWorks", "Fusion 360"],
     category: "Industrial Design",
-    image: "/car_door_3dscan.png"
+    image: "/car_door_3dscan.webp"
   },
   {
     title: "SolidWorks Macro Automation for 3D Modeling",
@@ -142,7 +142,7 @@ export const PROJECTS: ProjectItem[] = [
     ],
     tags: ["SolidWorks API", "C#", "VBA", "Automation"],
     category: "Industrial Design",
-    image: "/macro.png"
+    image: "/macro.webp"
   },
   {
     title: "Inventory Management System",
@@ -158,7 +158,7 @@ export const PROJECTS: ProjectItem[] = [
     ],
     tags: ["Gemini 1.5 Pro", "ChatGPT", "Airtable", "Automation", "Data Scraping"],
     category: "Industrial Design",
-    image: "/inventory.png"
+    image: "/inventory.webp"
   },
   {
     title: "Agricultural Irrigation Pump Reengineering",
@@ -175,7 +175,7 @@ export const PROJECTS: ProjectItem[] = [
     ],
     tags: ["ANSYS CFX", "SolidWorks", "3D Printing", "Sand Casting", "CFD"],
     category: "Research",
-    image: "/CFX.png"
+    image: "/CFX.webp"
   },
   {
     title: "Pesticide Spraying Drone",
@@ -192,7 +192,7 @@ export const PROJECTS: ProjectItem[] = [
     ],
     tags: ["ROS", "Gazebo", "Pixhawk", "3D Printing"],
     category: "Research",
-    image: "/drone.png"
+    image: "/drone.webp"
   }
 ];
 
