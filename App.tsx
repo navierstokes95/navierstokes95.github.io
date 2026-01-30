@@ -366,7 +366,7 @@ const App: React.FC = () => {
     return (
       <div className="selection:bg-blue-100 selection:text-blue-700">
         <Navbar onNavigate={handleNavigation} />
-        <ProjectDetail project={selectedProject} onBack={() => setSelectedProject(null)} />
+        <ProjectDetail project={selectedProject} onBack={() => handleNavigation('#projects')} />
         <footer className="py-12 bg-gray-50 border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-2xl font-black text-gray-900 mb-4 tracking-tighter">ARIF AHMED.</p>
